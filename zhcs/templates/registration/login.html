@@ -1,0 +1,13 @@
+{% block title %}
+Login page
+{% endblock %}
+
+{% block content %}
+<div>
+    <form action="{% url login %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><input type="submit" value="Login" /></p>
+    </form>
+</div>
+{% endblock %}

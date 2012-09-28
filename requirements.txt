@@ -1,0 +1,4 @@
+django
+django-social-auth
+django-annoying
+django-debug-toolbar

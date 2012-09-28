@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block content %}
+<p>Hello {{ user }}</p>
+<p>Content for authorized users</p>
+<p><a href="{% url logout %}">Exit</a></p>
+{% endblock %}
