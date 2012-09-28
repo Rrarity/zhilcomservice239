@@ -128,6 +128,18 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'social_auth',
+)
+
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.contrib.vkontakte.VKontakteOAuth2Backend',
+    'social_auth.backends.facebook.FacebookBackend',
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    'social_auth.backends.twitter.TwitterBackend',
+    'social_auth.backends.contrib.yandex.YandexOAuth2Backend',
+    'social_auth.backends.contrib.mailru.MailruBackend',
+    'social_auth.backends.contrib.odnoklassniki.OdnoklassnikiBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -158,3 +170,30 @@ LOGGING = {
         },
     }
 }
+
+# social settings
+VK_APP_ID = ''
+VK_API_SECRET = ''
+
+FACEBOOK_APP_ID = ''
+FACEBOOK_API_SECRET = ''
+
+TWITTER_CONSUMER_KEY = ''
+TWITTER_CONSUMER_SECRET = ''
+
+GOOGLE_OAUTH2_CLIENT_ID = ''
+GOOGLE_OAUTH2_CLIENT_SECRET = ''
+
+MAILRU_OAUTH2_CLIENT_KEY = ''
+MAILRU_OAUTH2_CLIENT_SECRET = ''
+
+YANDEX_OAUTH2_CLIENT_KEY = ''
+YANDEX_OAUTH2_CLIENT_SECRET = ''
+
+ODNOKLASSNIKI_OAUTH2_CLIENT_KEY = ''
+ODNOKLASSNIKI_OAUTH2_APP_KEY = ''
+ODNOKLASSNIKI_OAUTH2_CLIENT_SECRET = ''
+
+YANDEX_APP_ID = YANDEX_OAUTH2_CLIENT_KEY
+YANDEX_API_SECRET = YANDEX_OAUTH2_CLIENT_SECRET
+YANDEX_OAUTH2_API_URL = 'https://api-yaru.yandex.ru/me/'
