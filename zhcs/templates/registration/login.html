@@ -10,4 +10,27 @@ Login page
         <p><input type="submit" value="Login" /></p>
     </form>
 </div>
+<div>
+    <p style="margin: 0.4em;">
+        <a href="{% url socialauth_begin 'vkontakte-oauth2' %}">Enter VK</a>
+    </p>
+    <p style="margin: 0.4em;">
+        <a href="{% url socialauth_begin 'facebook' %}">Enter Facebook</a>
+    </p>
+    <p style="margin: 0.4em;">
+        <a href="{% url socialauth_begin 'google-oauth2' %}">Enter Google</a>
+    </p>
+    <p style="margin: 0.4em;">
+        <a href="{% url socialauth_begin 'twitter' %}">Enter Twitter</a>
+    </p>
+    <p style="margin: 0.4em;">
+        <a href="{% url socialauth_begin 'yandex-oauth2' %}">Enter Yandex</a>
+    </p>
+    <p style="margin: 0.4em;">
+        <a href="{% url socialauth_begin 'mailru-oauth2' %}">Enter Mail.Ru</a>
+    </p>
+    <p style="margin: 0.4em;">
+        <a href="{% url socialauth_begin 'odnoklassniki' %}">Enter Odnoklassniki</a>
+    </p>
+</div>
 {% endblock %}
